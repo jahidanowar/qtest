@@ -1,0 +1,26 @@
+[
+	{
+		"sku": "FZ-55D2601KM",
+		"device": "Toughbook 55",
+		"nickname": "TB55",
+		"processor": "i5",
+		"gps": false,
+		"touch": false
+	},
+	{
+		"sku": "FZ-55DZ001KM",
+		"device": "Toughbook 55",
+		"nickname": "TB55",
+		"processor": "i5",
+		"gps": true,
+		"touch": false
+	},
+	{
+		"sku": "FZ-55F2601KM",
+		"device": "Toughbook 55",
+		"nickname": "TB55",
+		"processor": "i5",
+		"gps": false,
+		"touch": true
+	}
+]

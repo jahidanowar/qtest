@@ -1,0 +1,20 @@
+[
+	{
+		"device": "Toughbook 55",
+		"image": "toughbook_55.png",
+		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li><li>Infrared webcam with tetra-array microphones and privacy cover</li><li>Up to 38 hours & hot swap with optional 2nd battery</li><li>Vehicle and desktop docks backwards compatibility</li><li>MIL-STD and IP53 certified magnesium alloy laptop with built-in handle</li></ul>",
+		"price": 2405
+	},
+	{
+		"device": "Toughbook 40",
+		"image": "toughbook_40.png",
+		"description": "<ul><li>Modular design and user-removable expansion packs offer unparalleled customization</li><li>State-of-the-art design optimizes thermals for effortless performance</li><li>Class leading 95db speakers, 5MP infrared webcam with privacy cover and tetra-array microphones</li><li>Fully rugged all-weather MIL-STD-810H & IP66 design built with magnesium alloy</li><li>Fastest cellular in the industry—up to 2Gbps 4G modem or 5.5Gbps 5G modem adds Sub6, C-band and mmWave</li></ul>",
+		"price": 4245
+	},
+	{
+		"device": "Toughbook G2",
+		"image": "toughbook_G2.png",
+		"description": "<ul><li>Modular design with 3 expansion areas including a new quick-release SSD</li><li>Backward compatible with most TOUGHBOOK G1 and 20 docks</li><li>Infrared webcam and Windows Hello enables biometric user authentication</li><li>18.5 hour battery life and optional battery hot swap for continuous use</li><li>Optional 5G with Sub-6 & mmWave (EM9190) or 4G LTE (EM7511)</li></ul>",
+		"price": 2860
+	}
+]
