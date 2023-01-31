@@ -1,5 +1,5 @@
 <script setup>
-import toughbooks from '@/start.json';
+import toughbooks from '@/products.json';
 </script>
 
 <template>
@@ -23,7 +23,9 @@ import toughbooks from '@/start.json';
 					><span class="text-h4">{{ toughbook.price }}</span>
 				</div>
 				<div class="text-center">
-					<v-btn flat block color="blue-darken-4">Select</v-btn>
+					<v-btn flat block color="blue-darken-4" nuxt to="/products/55"
+						>Select</v-btn
+					>
 				</div>
 			</v-card>
 		</v-col>

@@ -3,7 +3,33 @@
 		"device": "Toughbook 55",
 		"image": "toughbook_55.png",
 		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li><li>Infrared webcam with tetra-array microphones and privacy cover</li><li>Up to 38 hours & hot swap with optional 2nd battery</li><li>Vehicle and desktop docks backwards compatibility</li><li>MIL-STD and IP53 certified magnesium alloy laptop with built-in handle</li></ul>",
-		"price": 2405
+		"price": 2405,
+		"variations": [
+			{
+				"sku": "FZ-55D2601KM",
+				"device": "Toughbook 55",
+				"nickname": "TB55",
+				"processor": "i5",
+				"gps": false,
+				"touch": false
+			},
+			{
+				"sku": "FZ-55DZ001KM",
+				"device": "Toughbook 55",
+				"nickname": "TB55",
+				"processor": "i5",
+				"gps": true,
+				"touch": false
+			},
+			{
+				"sku": "FZ-55F2601KM",
+				"device": "Toughbook 55",
+				"nickname": "TB55",
+				"processor": "i5",
+				"gps": false,
+				"touch": true
+			}
+		]
 	},
 	{
 		"device": "Toughbook 40",

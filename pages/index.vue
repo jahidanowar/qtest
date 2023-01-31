@@ -5,5 +5,5 @@ const storeQuote = useQuoteStore();
 </script>
 
 <template>
-	<h1>{{ storeQuote.name }}</h1>
+	<StartQuote />
 </template>
