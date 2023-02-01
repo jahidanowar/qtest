@@ -2,7 +2,7 @@
 	{
 		"device": "Toughbook 55",
 		"image": "toughbook_55.png",
-		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li><li>Infrared webcam with tetra-array microphones and privacy cover</li><li>Up to 38 hours & hot swap with optional 2nd battery</li><li>Vehicle and desktop docks backwards compatibility</li><li>MIL-STD and IP53 certified magnesium alloy laptop with built-in handle</li></ul>",
+		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li></ul>",
 		"price": 2405,
 		"variations": [
 			{
@@ -11,7 +11,9 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": "Standard Screen"
+				"touch": "Standard Screen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55DZ001KM",
@@ -19,7 +21,9 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": "Standard Screen"
+				"touch": "Standard Screen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55F2601KM",
@@ -27,7 +31,9 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55FZ004KM",
@@ -35,7 +41,9 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55DZ002KM",
@@ -43,7 +51,9 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": "Standard Screen"
+				"touch": "Standard Screen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55DZ003KM",
@@ -51,7 +61,9 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": "Standard Screen"
+				"touch": "Standard Screen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55FZ006KM",
@@ -59,7 +71,9 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-55FZ007KM",
@@ -67,7 +81,9 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_55.png",
+				"ram": "16GB"
 			}
 		],
 		"options": [
@@ -106,7 +122,7 @@
 	{
 		"device": "Toughbook 40",
 		"image": "toughbook_40.png",
-		"description": "<ul><li>Modular design and user-removable expansion packs offer unparalleled customization</li><li>State-of-the-art design optimizes thermals for effortless performance</li><li>Class leading 95db speakers, 5MP infrared webcam with privacy cover and tetra-array microphones</li><li>Fully rugged all-weather MIL-STD-810H & IP66 design built with magnesium alloy</li><li>Fastest cellular in the industry—up to 2Gbps 4G modem or 5.5Gbps 5G modem adds Sub6, C-band and mmWave</li></ul>",
+		"description": "<ul><li>Modular design and user-removable expansion packs offer unparalleled customization</li></ul>",
 		"price": 4245,
 		"variations": [
 			{
@@ -115,7 +131,9 @@
 				"nickname": "TB40",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_40.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-40ACAABKM",
@@ -123,7 +141,9 @@
 				"nickname": "TB40",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": "Standard Screen"
+				"touch": "Touchscreen",
+				"image": "toughbook_40.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-40CCAAXKM",
@@ -131,7 +151,9 @@
 				"nickname": "TB40",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_40.png",
+				"ram": "16GB"
 			},
 			{
 				"sku": "FZ-40CCAABKM",
@@ -139,14 +161,16 @@
 				"nickname": "TB40",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_40.png",
+				"ram": "16GB"
 			}
 		]
 	},
 	{
 		"device": "Toughbook G2",
 		"image": "toughbook_G2.png",
-		"description": "<ul><li>Modular design with 3 expansion areas including a new quick-release SSD</li><li>Backward compatible with most TOUGHBOOK G1 and 20 docks</li><li>Infrared webcam and Windows Hello enables biometric user authentication</li><li>18.5 hour battery life and optional battery hot swap for continuous use</li><li>Optional 5G with Sub-6 & mmWave (EM9190) or 4G LTE (EM7511)</li></ul>",
+		"description": "<ul><li>Modular design with 3 expansion areas including a new quick-release SSD and backward compatible</li></ul>",
 		"price": 2860,
 		"variations": [
 			{
@@ -155,7 +179,29 @@
 				"nickname": "TBG2",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": "Touchscreen"
+				"touch": "Touchscreen",
+				"image": "toughbook_G2.png",
+				"ram": "16GB"
+			},
+			{
+				"sku": "FZ-G2AZ005KM",
+				"device": "Toughbook G2",
+				"nickname": "TBG2",
+				"processor": "i5",
+				"gps": "4G LTE",
+				"touch": "Touchscreen",
+				"image": "toughbook_G2.png",
+				"ram": "16GB"
+			},
+			{
+				"sku": "FZ-G2BZ029KM",
+				"device": "Toughbook G2",
+				"nickname": "TBG2",
+				"processor": "i7",
+				"gps": "4G LTE",
+				"touch": "Touchscreen",
+				"image": "toughbook_G2.png",
+				"ram": "16GB"
 			}
 		]
 	}

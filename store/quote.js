@@ -6,26 +6,29 @@ export const useQuoteStore = defineStore('quote', {
 		toughbooks: [],
 		toughbook: {},
 		product: {
-			sku: '',
-			device: 'Toughbook 55',
-			nickname: 'TB55',
-			processor: 'i5',
-			gps: 'No Celluar',
-			touch: 'Standard Screen',
-			price: 0,
-			quantity: 1,
+			sku: null,
+			device: null,
+			nickname: null,
+			processor: null,
+			gps: null,
+			touch: null,
+			ram: null,
+			price: null,
+			quantity: null,
 		},
 		productTotal: {
-			base: 2405,
+			base: 0,
 			processor: 0,
 			gps: 0,
 			touch: 0,
+			ram: 0,
 		},
 		quantity: 1,
 		drawer: false,
 		cart: [],
+		cartTotal: 0,
 		salesRep: 'Select Account Rep',
-		salesReps: ['Michael Cayes', 'Claes Adler'],
+		salesReps: ['Lori Oquendo', 'Michael Cayes', 'Claes Adler'],
 	}),
 	actions: {
 		fetchToughbooks() {
@@ -39,6 +42,20 @@ export const useQuoteStore = defineStore('quote', {
 			this.toughbook = this.products.filter((item) => {
 				return item.device.includes('Toughbook 55');
 			});
+
+			this.product = {
+				sku: null,
+				device: this.toughbook[0].device,
+				nickname: null,
+				processor: 'i5',
+				gps: 'No Celluar',
+				touch: 'Standard Screen',
+				price: 2405,
+				ram: '16GB',
+				quantity: 1,
+			};
+
+			this.productTotal.base = this.product.price;
 		},
 
 		increaseCount() {
@@ -48,6 +65,7 @@ export const useQuoteStore = defineStore('quote', {
 			this.quantity--;
 		},
 		addToCart() {
+			this.drawer = true;
 			const newProduct = this.toughbook[0].variations.find(
 				(tb) =>
 					tb.processor === this.product.processor &&
@@ -55,15 +73,32 @@ export const useQuoteStore = defineStore('quote', {
 					tb.touch === this.product.touch
 			);
 
-			newProduct.price =
+			newProduct.quantity = this.quantity;
+
+			const formatter = new Intl.NumberFormat('en-US', {
+				style: 'currency',
+				currency: 'USD',
+			});
+
+			const totalPrice =
 				this.productTotal.base +
 				this.productTotal.processor +
 				this.productTotal.gps +
 				this.productTotal.touch;
 
-			newProduct.quantity = this.quantity;
+			const total = totalPrice * newProduct.quantity;
+
+			newProduct.price = formatter.format(total);
 
 			this.cart.push(newProduct);
+
+			// let sum = 0;
+
+			// this.cart.forEach((item) => {
+			// 	sum += item.price;
+			// });
+
+			// this.cartTotal = sum;
 		},
 	},
 	getters: {
@@ -89,5 +124,8 @@ export const useQuoteStore = defineStore('quote', {
 
 			return totalCurrency;
 		},
+		// getCartTotal(state) {
+		// 	return state.cartTotal;
+		// },
 	},
 });
