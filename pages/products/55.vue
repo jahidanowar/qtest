@@ -5,20 +5,46 @@ const storeQuote = useQuoteStore();
 storeQuote.fetchToughbook();
 
 function updateProcessor(v) {
-	this.storeQuote.product.processor = v;
+	if (v === 'i5') {
+		this.storeQuote.product.processor = v;
+		this.storeQuote.productTotal.processor = 0;
+	} else {
+		this.storeQuote.product.processor = v;
+		this.storeQuote.productTotal.processor = 365;
+	}
 }
 
 function updateCelluar(v) {
-	this.storeQuote.product.gps = v;
+	if (v === 'No Celluar') {
+		this.storeQuote.product.gps = v;
+		this.storeQuote.productTotal.gps = 0;
+	} else {
+		this.storeQuote.product.gps = v;
+		this.storeQuote.productTotal.gps = 285;
+	}
+}
+
+function updateScreen(v) {
+	if (v === 'Standard Screen') {
+		this.storeQuote.product.touch = v;
+		this.storeQuote.productTotal.touch = 0;
+	} else {
+		this.storeQuote.product.touch = v;
+		this.storeQuote.productTotal.touch = 190;
+	}
 }
 </script>
 
 <template>
 	<v-row>
-		<v-col cols="12" md="6" class="d-flex justify-center align-start"
+		<v-col
+			cols="12"
+			md="5"
+			offset-md="1"
+			class="d-flex justify-center align-start"
 			><v-img src="/images/toughbook_55.png"
 		/></v-col>
-		<v-col cols="12" md="6" class="d-flex flex-column mt-6">
+		<v-col cols="12" md="4" offset-md="1" class="d-flex flex-column mt-6">
 			<div class="text-h4 font-weight-bold mb-3">
 				Customize the Toughbook 55
 			</div>
@@ -51,6 +77,9 @@ function updateCelluar(v) {
 					variant="outlined"
 					color="blue-darken-2"
 					class="d-flex pa-4 my-2 rounded-lg"
+					:class="[
+						storeQuote.product.processor === 'i5' ? 'active-card-bg' : '',
+					]"
 					@click="updateProcessor('i5')"
 					><v-card-title class="text-h6 text-grey-darken-3"
 						>i5</v-card-title
@@ -60,10 +89,13 @@ function updateCelluar(v) {
 					variant="outlined"
 					color="blue-darken-2"
 					class="d-flex align-center pa-4 my-2 rounded-lg"
+					:class="[
+						storeQuote.product.processor === 'i7' ? 'active-card-bg' : '',
+					]"
 					@click="updateProcessor('i7')"
 					><v-card-title class="text-h6 text-grey-darken-3">i7</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $290</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $365</div></v-card
 				>
 			</section>
 			<v-divider />
@@ -79,6 +111,9 @@ function updateCelluar(v) {
 					color="blue-darken-2"
 					@click="updateCelluar('No Celluar')"
 					class="d-flex pa-4 my-2 rounded-lg"
+					:class="[
+						storeQuote.product.gps === 'No Celluar' ? 'active-card-bg' : '',
+					]"
 					><v-card-title class="text-h6 text-grey-darken-3"
 						>No Celluar</v-card-title
 					></v-card
@@ -88,44 +123,62 @@ function updateCelluar(v) {
 					color="blue-darken-2"
 					@click="updateCelluar('4G LTE')"
 					class="d-flex align-center pa-4 my-2 rounded-lg"
+					:class="[storeQuote.product.gps === '4G LTE' ? 'active-card-bg' : '']"
 					><v-card-title class="text-h6 text-grey-darken-3">4G LTE</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $400</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $285</div></v-card
+				>
+			</section>
+			<section class="d-flex flex-column py-4">
+				<div class="text-subtitle-1 font-weight-bold">Touchscreen</div>
+				<div class="pointer">
+					<span class="text-blue-darken-4 text-subtitle-2 mb-3"
+						>Make this a touchscreen?</span
+					>
+				</div>
+				<v-card
+					variant="outlined"
+					color="blue-darken-2"
+					@click="updateScreen('Standard Screen')"
+					:class="[
+						storeQuote.product.touch === 'Standard Screen'
+							? 'active-card-bg'
+							: '',
+					]"
+					class="d-flex pa-4 my-2 rounded-lg"
+					><v-card-title class="text-h6 text-grey-darken-3"
+						>Standard Screen</v-card-title
+					></v-card
+				>
+				<v-card
+					variant="outlined"
+					color="blue-darken-2"
+					@click="updateScreen('Touchscreen')"
+					class="d-flex align-center pa-4 my-2 rounded-lg"
+					:class="[
+						storeQuote.product.touch === 'Touchscreen' ? 'active-card-bg' : '',
+					]"
+					><v-card-title class="text-h6 text-grey-darken-3"
+						>Touch Screen</v-card-title
+					><v-spacer />
+					<div class="mr-6 text-grey-darken-3">+ $190</div></v-card
 				>
 			</section>
 		</v-col>
 	</v-row>
-	<v-footer app class="bg-grey-lighten-4">
-		<v-container class="d-flex justify-end align-center">
-			<div class="d-flex align-center mr-4">
-				<v-btn
-					size="x-small"
-					icon="mdi-minus"
-					variant="tonal"
-					color="blue-lighten-2"
-					@click="storeQuote.decreaseCount()"
-				></v-btn>
-				<div class="mx-3">{{ storeQuote.quantity }}</div>
-				<v-btn
-					size="x-small"
-					icon="mdi-plus"
-					variant="tonal"
-					color="blue-lighten-2"
-					@click="storeQuote.increaseCount()"
-				></v-btn>
-			</div>
-			<div class="d-flex align-center text-h4">
-				{{ storeQuote.getProductTotal }}
-			</div>
-			<v-btn variant="tonal" color="blue-darken-2" class="ml-6"
-				>Add To Quote</v-btn
-			></v-container
-		>
-	</v-footer>
+	<QuoteFooter />
 </template>
 
 <style>
 .pointer :hover {
 	cursor: pointer;
+}
+
+.short-description ul li {
+	padding-bottom: 10px;
+}
+
+.active-card-bg {
+	background-color: rgb(223, 239, 255);
 }
 </style>

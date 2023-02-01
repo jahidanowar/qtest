@@ -22,14 +22,17 @@ storeQuote.fetchToughbooks();
 				<td>{{ product.sku }}</td>
 				<td>{{ product.processor }}</td>
 				<td>
-					<v-icon :color="product.gps ? 'green' : 'red'">{{
-						product.gps === true ? 'mdi-check' : 'mdi-close'
+					<v-icon :color="product.gps === 'No Celluar' ? 'red' : 'green'">{{
+						product.gps === 'No Celluar' ? 'mdi-close' : 'mdi-check'
 					}}</v-icon>
 				</td>
 				<td>
-					<v-icon :color="product.touch ? 'green' : 'red'">{{
-						product.touch === true ? 'mdi-check' : 'mdi-close'
-					}}</v-icon>
+					<v-icon
+						:color="product.touch === 'Standard Screen' ? 'red' : 'green'"
+						>{{
+							product.touch === 'Standard Screen' ? 'mdi-close' : 'mdi-check'
+						}}</v-icon
+					>
 				</td>
 			</tr>
 		</tbody>

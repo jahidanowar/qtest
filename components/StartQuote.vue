@@ -1,5 +1,7 @@
 <script setup>
-import toughbooks from '@/products.json';
+import Toughbooks from '@/products.json';
+
+const toughbooks = ref(Toughbooks);
 </script>
 
 <template>
@@ -23,7 +25,7 @@ import toughbooks from '@/products.json';
 					><span class="text-h4">{{ toughbook.price }}</span>
 				</div>
 				<div class="text-center">
-					<v-btn flat block color="blue-darken-4" nuxt to="/products/55"
+					<v-btn flat block color="blue-darken-4" to="/products/55"
 						>Select</v-btn
 					>
 				</div>

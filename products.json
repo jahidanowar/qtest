@@ -11,7 +11,7 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": false
+				"touch": "Standard Screen"
 			},
 			{
 				"sku": "FZ-55DZ001KM",
@@ -19,7 +19,7 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": false
+				"touch": "Standard Screen"
 			},
 			{
 				"sku": "FZ-55F2601KM",
@@ -27,7 +27,7 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": true
+				"touch": "Touchscreen"
 			},
 			{
 				"sku": "FZ-55FZ004KM",
@@ -35,7 +35,7 @@
 				"nickname": "TB55",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": true
+				"touch": "Touchscreen"
 			},
 			{
 				"sku": "FZ-55DZ002KM",
@@ -43,7 +43,7 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": false
+				"touch": "Standard Screen"
 			},
 			{
 				"sku": "FZ-55DZ003KM",
@@ -51,7 +51,7 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": false
+				"touch": "Standard Screen"
 			},
 			{
 				"sku": "FZ-55FZ006KM",
@@ -59,7 +59,7 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": true
+				"touch": "Touchscreen"
 			},
 			{
 				"sku": "FZ-55FZ007KM",
@@ -67,19 +67,39 @@
 				"nickname": "TB55",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": true
+				"touch": "Touchscreen"
 			}
 		],
 		"options": [
 			{
-				"type": "Processor",
+				"type": "processor",
 				"name": "i5",
 				"price": 0
 			},
 			{
-				"type": "Processor",
+				"type": "processor",
 				"name": "i7",
-				"price": 400
+				"price": 365
+			},
+			{
+				"type": "celluar",
+				"name": "No Celluar",
+				"price": 0
+			},
+			{
+				"type": "celluar",
+				"name": "4G LTE",
+				"price": 285
+			},
+			{
+				"type": "screen",
+				"name": "Standard Screen",
+				"price": 0
+			},
+			{
+				"type": "screen",
+				"name": "Touchscreen",
+				"price": 190
 			}
 		]
 	},
@@ -95,7 +115,7 @@
 				"nickname": "TB40",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": true
+				"touch": "Touchscreen"
 			},
 			{
 				"sku": "FZ-40ACAABKM",
@@ -103,7 +123,7 @@
 				"nickname": "TB40",
 				"processor": "i5",
 				"gps": "4G LTE",
-				"touch": false
+				"touch": "Standard Screen"
 			},
 			{
 				"sku": "FZ-40CCAAXKM",
@@ -111,7 +131,7 @@
 				"nickname": "TB40",
 				"processor": "i7",
 				"gps": "No Celluar",
-				"touch": true
+				"touch": "Touchscreen"
 			},
 			{
 				"sku": "FZ-40CCAABKM",
@@ -119,7 +139,7 @@
 				"nickname": "TB40",
 				"processor": "i7",
 				"gps": "4G LTE",
-				"touch": true
+				"touch": "Touchscreen"
 			}
 		]
 	},
@@ -135,7 +155,7 @@
 				"nickname": "TBG2",
 				"processor": "i5",
 				"gps": "No Celluar",
-				"touch": true
+				"touch": "Touchscreen"
 			}
 		]
 	}

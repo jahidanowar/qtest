@@ -11,7 +11,9 @@ export const useQuoteStore = defineStore('quote', {
 			nickname: 'TB55',
 			processor: 'i5',
 			gps: 'No Celluar',
-			touch: false,
+			touch: 'Standard Screen',
+			price: 0,
+			quantity: 1,
 		},
 		productTotal: {
 			base: 2405,
@@ -20,6 +22,10 @@ export const useQuoteStore = defineStore('quote', {
 			touch: 0,
 		},
 		quantity: 1,
+		drawer: false,
+		cart: [],
+		salesRep: 'Select Account Rep',
+		salesReps: ['Michael Cayes', 'Claes Adler'],
 	}),
 	actions: {
 		fetchToughbooks() {
@@ -34,20 +40,37 @@ export const useQuoteStore = defineStore('quote', {
 				return item.device.includes('Toughbook 55');
 			});
 		},
+
 		increaseCount() {
 			this.quantity++;
 		},
 		decreaseCount() {
 			this.quantity--;
 		},
+		addToCart() {
+			const newProduct = this.toughbook[0].variations.find(
+				(tb) =>
+					tb.processor === this.product.processor &&
+					tb.gps === this.product.gps &&
+					tb.touch === this.product.touch
+			);
+
+			newProduct.price =
+				this.productTotal.base +
+				this.productTotal.processor +
+				this.productTotal.gps +
+				this.productTotal.touch;
+
+			newProduct.quantity = this.quantity;
+
+			this.cart.push(newProduct);
+		},
 	},
 	getters: {
 		getToughbooks(state) {
 			return state.toughbooks;
 		},
-		getTB55(state) {
-			return state.toughbook;
-		},
+
 		getProductTotal(state) {
 			const formatter = new Intl.NumberFormat('en-US', {
 				style: 'currency',

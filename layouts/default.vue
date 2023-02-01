@@ -1,7 +1,7 @@
 <template>
 	<v-app id="navigation">
 		<NavBar />
-
+		<Cart />
 		<v-main>
 			<v-container class="mt-12">
 				<v-row>

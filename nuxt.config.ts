@@ -1,5 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	app: {
+		head: {
+			title: 'RSA Quote Builder',
+			meta: [
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1',
+				},
+				{
+					charset: 'utf-8',
+				},
+			],
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/png',
+					href: 'http://localhost:3000/images/favicon.png',
+				},
+			],
+		},
+	},
+
 	modules: [
 		[
 			'@pinia/nuxt',
