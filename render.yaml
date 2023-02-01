@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: <PROJECTNAME>
+    name: RSA Quote App
     env: node
     branch: main
     startCommand: node .output/server/index.mjs
