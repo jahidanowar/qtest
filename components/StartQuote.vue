@@ -25,7 +25,11 @@ const toughbooks = ref(Toughbooks);
 					><span class="text-h4">{{ toughbook.price }}</span>
 				</div>
 				<div class="text-center">
-					<v-btn flat block color="blue-darken-4" to="/products/55"
+					<v-btn
+						flat
+						block
+						color="blue-darken-4"
+						:to="`/products/${toughbook.pid}`"
 						>Select</v-btn
 					>
 				</div>

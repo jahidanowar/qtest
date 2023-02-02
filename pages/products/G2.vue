@@ -2,7 +2,7 @@
 import { useQuoteStore } from '@/store/quote';
 
 const storeQuote = useQuoteStore();
-storeQuote.fetchToughbook55();
+storeQuote.fetchToughbookG2();
 
 function updateProcessor(v) {
 	if (v === 'i5') {
@@ -10,7 +10,7 @@ function updateProcessor(v) {
 		storeQuote.productTotal.processor = 0;
 	} else {
 		storeQuote.product.processor = v;
-		storeQuote.productTotal.processor = 365;
+		storeQuote.productTotal.processor = 390;
 	}
 }
 
@@ -20,17 +20,17 @@ function updateCelluar(v) {
 		storeQuote.productTotal.gps = 0;
 	} else {
 		storeQuote.product.gps = v;
-		storeQuote.productTotal.gps = 285;
+		storeQuote.productTotal.gps = 260;
 	}
 }
 
-function updateScreen(v) {
-	if (v === 'Standard Screen') {
-		storeQuote.product.touch = v;
-		storeQuote.productTotal.touch = 0;
+function updateRAM(v) {
+	if (v === '16GB') {
+		storeQuote.product.ram = v;
+		storeQuote.productTotal.ram = 0;
 	} else {
-		storeQuote.product.touch = v;
-		storeQuote.productTotal.touch = 190;
+		storeQuote.product.ram = v;
+		storeQuote.productTotal.ram = 435;
 	}
 }
 </script>
@@ -42,27 +42,28 @@ function updateScreen(v) {
 			md="5"
 			offset-md="1"
 			class="d-flex justify-center align-start"
-			><v-img src="/images/toughbook_55.png"
+			><v-img src="/images/toughbook_G2.png"
 		/></v-col>
 		<v-col cols="12" md="4" offset-md="1" class="d-flex flex-column mt-6">
 			<div class="text-h4 font-weight-bold mb-3">
-				Customize the Toughbook 55
+				Customize the Toughbook G2
 			</div>
 			<div class="mb-4 short-description">
 				<ul>
 					<li>
-						Modular design with 6 user-removable expansion areas including 3
-						xPAK areas, RAM, SSD and keyboard
+						Innovative modular design with three expansion areas including a new
+						quick-release SSD
+					</li>
+					<li>Backward compatible with most TOUGHBOOK G1 and 20 docks</li>
+					<li>
+						Infrared webcam and Windows Hello enables biometric user
+						authentication
 					</li>
 					<li>
-						Infrared webcam with tetra-array microphones and privacy cover
+						18.5 hour battery life and optional battery hot swap for continuous
+						use
 					</li>
-					<li>Up to 38 hours & hot swap with optional 2nd battery</li>
-					<li>Vehicle and desktop docks backwards compatibility</li>
-					<li>
-						MIL-STD and IP53 certified magnesium alloy laptop with built-in
-						handle
-					</li>
+					<li>Optional 5G with Sub-6 & mmWave (EM9190) or 4G LTE (EM7511)</li>
 				</ul>
 			</div>
 			<v-divider />
@@ -95,7 +96,7 @@ function updateScreen(v) {
 					@click="updateProcessor('i7')"
 					><v-card-title class="text-h6 text-grey-darken-3">i7</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $365</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $390</div></v-card
 				>
 			</section>
 			<v-divider />
@@ -126,42 +127,36 @@ function updateScreen(v) {
 					:class="[storeQuote.product.gps === '4G LTE' ? 'active-card-bg' : '']"
 					><v-card-title class="text-h6 text-grey-darken-3">4G LTE</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $285</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $260</div></v-card
 				>
 			</section>
+			<v-divider />
 			<section class="d-flex flex-column py-4">
-				<div class="text-subtitle-1 font-weight-bold">Touchscreen</div>
+				<div class="text-subtitle-1 font-weight-bold">RAM</div>
 				<div class="pointer">
 					<span class="text-blue-darken-4 text-subtitle-2 mb-3"
-						>Make this a touchscreen?</span
+						>Do you want upgrade the RAM?</span
 					>
 				</div>
 				<v-card
 					variant="outlined"
 					color="blue-darken-2"
-					@click="updateScreen('Standard Screen')"
-					:class="[
-						storeQuote.product.touch === 'Standard Screen'
-							? 'active-card-bg'
-							: '',
-					]"
+					@click="updateRAM('16GB')"
 					class="d-flex pa-4 my-2 rounded-lg"
+					:class="[storeQuote.product.ram === '16GB' ? 'active-card-bg' : '']"
 					><v-card-title class="text-h6 text-grey-darken-3"
-						>Standard Screen</v-card-title
+						>16GB</v-card-title
 					></v-card
 				>
 				<v-card
 					variant="outlined"
 					color="blue-darken-2"
-					@click="updateScreen('Touchscreen')"
+					@click="updateRAM('32GB')"
 					class="d-flex align-center pa-4 my-2 rounded-lg"
-					:class="[
-						storeQuote.product.touch === 'Touchscreen' ? 'active-card-bg' : '',
-					]"
-					><v-card-title class="text-h6 text-grey-darken-3"
-						>Touch Screen</v-card-title
+					:class="[storeQuote.product.ram === '32GB' ? 'active-card-bg' : '']"
+					><v-card-title class="text-h6 text-grey-darken-3">32GB</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $190</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $435</div></v-card
 				>
 			</section>
 		</v-col>

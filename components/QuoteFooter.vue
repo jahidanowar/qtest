@@ -2,7 +2,6 @@
 import { useQuoteStore } from '@/store/quote';
 
 const storeQuote = useQuoteStore();
-storeQuote.fetchToughbook();
 </script>
 
 <template>

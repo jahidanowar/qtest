@@ -2,7 +2,7 @@
 import { useQuoteStore } from '@/store/quote';
 
 const storeQuote = useQuoteStore();
-storeQuote.fetchToughbook55();
+storeQuote.fetchToughbook40();
 
 function updateProcessor(v) {
 	if (v === 'i5') {
@@ -10,7 +10,7 @@ function updateProcessor(v) {
 		storeQuote.productTotal.processor = 0;
 	} else {
 		storeQuote.product.processor = v;
-		storeQuote.productTotal.processor = 365;
+		storeQuote.productTotal.processor = 390;
 	}
 }
 
@@ -20,17 +20,7 @@ function updateCelluar(v) {
 		storeQuote.productTotal.gps = 0;
 	} else {
 		storeQuote.product.gps = v;
-		storeQuote.productTotal.gps = 285;
-	}
-}
-
-function updateScreen(v) {
-	if (v === 'Standard Screen') {
-		storeQuote.product.touch = v;
-		storeQuote.productTotal.touch = 0;
-	} else {
-		storeQuote.product.touch = v;
-		storeQuote.productTotal.touch = 190;
+		storeQuote.productTotal.gps = 430;
 	}
 }
 </script>
@@ -42,26 +32,33 @@ function updateScreen(v) {
 			md="5"
 			offset-md="1"
 			class="d-flex justify-center align-start"
-			><v-img src="/images/toughbook_55.png"
+			><v-img src="/images/toughbook_40.png"
 		/></v-col>
 		<v-col cols="12" md="4" offset-md="1" class="d-flex flex-column mt-6">
 			<div class="text-h4 font-weight-bold mb-3">
-				Customize the Toughbook 55
+				Customize the Toughbook 40
 			</div>
 			<div class="mb-4 short-description">
 				<ul>
 					<li>
-						Modular design with 6 user-removable expansion areas including 3
-						xPAK areas, RAM, SSD and keyboard
+						Innovative modular design and user-removable expansion packs offer
+						unparalleled customization
 					</li>
 					<li>
-						Infrared webcam with tetra-array microphones and privacy cover
+						State-of-the-art design optimizes thermals for effortless
+						performance
 					</li>
-					<li>Up to 38 hours & hot swap with optional 2nd battery</li>
-					<li>Vehicle and desktop docks backwards compatibility</li>
 					<li>
-						MIL-STD and IP53 certified magnesium alloy laptop with built-in
-						handle
+						Class leading 95db speakers, 5MP infrared webcam with privacy cover
+						and tetra-array microphones
+					</li>
+					<li>
+						Fully rugged all-weather MIL-STD-810H & IP66 design built with
+						magnesium alloy
+					</li>
+					<li>
+						Fastest cellular in the industry—up to 2Gbps 4G modem or 5.5Gbps 5G
+						modem adds Sub6, C-band and mmWave
 					</li>
 				</ul>
 			</div>
@@ -95,7 +92,7 @@ function updateScreen(v) {
 					@click="updateProcessor('i7')"
 					><v-card-title class="text-h6 text-grey-darken-3">i7</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $365</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $390</div></v-card
 				>
 			</section>
 			<v-divider />
@@ -126,42 +123,7 @@ function updateScreen(v) {
 					:class="[storeQuote.product.gps === '4G LTE' ? 'active-card-bg' : '']"
 					><v-card-title class="text-h6 text-grey-darken-3">4G LTE</v-card-title
 					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $285</div></v-card
-				>
-			</section>
-			<section class="d-flex flex-column py-4">
-				<div class="text-subtitle-1 font-weight-bold">Touchscreen</div>
-				<div class="pointer">
-					<span class="text-blue-darken-4 text-subtitle-2 mb-3"
-						>Make this a touchscreen?</span
-					>
-				</div>
-				<v-card
-					variant="outlined"
-					color="blue-darken-2"
-					@click="updateScreen('Standard Screen')"
-					:class="[
-						storeQuote.product.touch === 'Standard Screen'
-							? 'active-card-bg'
-							: '',
-					]"
-					class="d-flex pa-4 my-2 rounded-lg"
-					><v-card-title class="text-h6 text-grey-darken-3"
-						>Standard Screen</v-card-title
-					></v-card
-				>
-				<v-card
-					variant="outlined"
-					color="blue-darken-2"
-					@click="updateScreen('Touchscreen')"
-					class="d-flex align-center pa-4 my-2 rounded-lg"
-					:class="[
-						storeQuote.product.touch === 'Touchscreen' ? 'active-card-bg' : '',
-					]"
-					><v-card-title class="text-h6 text-grey-darken-3"
-						>Touch Screen</v-card-title
-					><v-spacer />
-					<div class="mr-6 text-grey-darken-3">+ $190</div></v-card
+					<div class="mr-6 text-grey-darken-3">+ $430</div></v-card
 				>
 			</section>
 		</v-col>

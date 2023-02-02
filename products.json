@@ -2,6 +2,7 @@
 	{
 		"device": "Toughbook 55",
 		"image": "toughbook_55.png",
+		"pid": "55",
 		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li></ul>",
 		"price": 2405,
 		"variations": [
@@ -122,6 +123,7 @@
 	{
 		"device": "Toughbook 40",
 		"image": "toughbook_40.png",
+		"pid": "40",
 		"description": "<ul><li>Modular design and user-removable expansion packs offer unparalleled customization</li></ul>",
 		"price": 4245,
 		"variations": [
@@ -170,6 +172,7 @@
 	{
 		"device": "Toughbook G2",
 		"image": "toughbook_G2.png",
+		"pid": "G2",
 		"description": "<ul><li>Modular design with 3 expansion areas including a new quick-release SSD and backward compatible</li></ul>",
 		"price": 2860,
 		"variations": [
@@ -194,7 +197,7 @@
 				"ram": "16GB"
 			},
 			{
-				"sku": "FZ-G2BZ029KM",
+				"sku": "FZ-G2BZ00EKM",
 				"device": "Toughbook G2",
 				"nickname": "TBG2",
 				"processor": "i7",
@@ -202,6 +205,16 @@
 				"touch": "Touchscreen",
 				"image": "toughbook_G2.png",
 				"ram": "16GB"
+			},
+			{
+				"sku": "FZ-G2BZ029KM",
+				"device": "Toughbook G2",
+				"nickname": "TBG2",
+				"processor": "i7",
+				"gps": "4G LTE",
+				"touch": "Touchscreen",
+				"image": "toughbook_G2.png",
+				"ram": "32GB"
 			}
 		]
 	}

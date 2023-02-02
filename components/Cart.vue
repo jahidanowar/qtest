@@ -41,6 +41,15 @@ const storeQuote = useQuoteStore();
 				class="mb-3"
 			></v-text-field>
 			<!-- <v-select :items="storeQuote.salesReps" variant="outlined"></v-select> -->
+			<v-btn
+				variant="flat"
+				block
+				size="x-large"
+				color="grey-darken-3"
+				append-icon="mdi-basket-outline"
+				to="/products/extra"
+				>Add-ons & Finalize</v-btn
+			>
 
 			<v-divider class="my-6" />
 		</section>
@@ -51,7 +60,7 @@ const storeQuote = useQuoteStore();
 				:key="item.sku"
 				class="d-flex flex-column"
 			>
-				<v-card flat width="400px" class="d-flex justify-space-between mb-8">
+				<v-card flat width="380px" class="d-flex justify-space-between mb-8">
 					<div class="d-flex">
 						<div class="mr-3">
 							<v-img :src="`/images/${item.image}`" width="72px"></v-img>
@@ -62,11 +71,17 @@ const storeQuote = useQuoteStore();
 								{{ item.device }}
 							</div>
 
-							<div class="text-body-2 text-grey-darken-2">
-								{{ item.processor }}
+							<div
+								class="text-body-2 text-grey-darken-2"
+								v-if="item.processor || item.gps || item.touch"
+							>
+								<span v-if="item.processor">{{ item.processor }}</span> •
+								<span v-if="item.gps">{{ item.gps }}</span> •
+								<span v-if="item.ram">{{ item.ram }}</span>
 							</div>
-							<div class="text-body-2 text-grey-darken-2">{{ item.gps }}</div>
-							<div class="text-body-2 text-grey-darken-2">{{ item.touch }}</div>
+							<div v-if="item.touch" class="text-body-2 text-grey-darken-2">
+								{{ item.touch }}
+							</div>
 						</div>
 					</div>
 
