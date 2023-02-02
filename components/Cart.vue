@@ -33,14 +33,14 @@ const storeQuote = useQuoteStore();
 				hide-details="true"
 				class="mb-3"
 			></v-text-field>
-
-			<v-select
-				v-model="storeQuote.salesRep"
-				:items="storeQuote.salesReps"
+			<v-text-field
+				label="Sales Rep"
 				variant="outlined"
 				bg-color="#f9f9f9"
 				hide-details="true"
-			></v-select>
+				class="mb-3"
+			></v-text-field>
+			<!-- <v-select :items="storeQuote.salesReps" variant="outlined"></v-select> -->
 
 			<v-divider class="my-6" />
 		</section>

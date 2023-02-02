@@ -27,7 +27,7 @@ export const useQuoteStore = defineStore('quote', {
 		drawer: false,
 		cart: [],
 		cartTotal: 0,
-		salesRep: 'Select Account Rep',
+		salesRep: null,
 		salesReps: ['Lori Oquendo', 'Michael Cayes', 'Claes Adler'],
 	}),
 	actions: {
