@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 				{
 					rel: 'icon',
 					type: 'image/png',
-					href: 'http://localhost:3000/images/favicon.png',
+					href: 'https://res.cloudinary.com/dywpw9ram/image/upload/v1675299037/Assets/favicon_eyhhfk.png',
 				},
 			],
 		},
