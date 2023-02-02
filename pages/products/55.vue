@@ -6,31 +6,31 @@ storeQuote.fetchToughbook();
 
 function updateProcessor(v) {
 	if (v === 'i5') {
-		this.storeQuote.product.processor = v;
-		this.storeQuote.productTotal.processor = 0;
+		storeQuote.product.processor = v;
+		storeQuote.productTotal.processor = 0;
 	} else {
-		this.storeQuote.product.processor = v;
-		this.storeQuote.productTotal.processor = 365;
+		storeQuote.product.processor = v;
+		storeQuote.productTotal.processor = 365;
 	}
 }
 
 function updateCelluar(v) {
 	if (v === 'No Celluar') {
-		this.storeQuote.product.gps = v;
-		this.storeQuote.productTotal.gps = 0;
+		storeQuote.product.gps = v;
+		storeQuote.productTotal.gps = 0;
 	} else {
-		this.storeQuote.product.gps = v;
-		this.storeQuote.productTotal.gps = 285;
+		storeQuote.product.gps = v;
+		storeQuote.productTotal.gps = 285;
 	}
 }
 
 function updateScreen(v) {
 	if (v === 'Standard Screen') {
-		this.storeQuote.product.touch = v;
-		this.storeQuote.productTotal.touch = 0;
+		storeQuote.product.touch = v;
+		storeQuote.productTotal.touch = 0;
 	} else {
-		this.storeQuote.product.touch = v;
-		this.storeQuote.productTotal.touch = 190;
+		storeQuote.product.touch = v;
+		storeQuote.productTotal.touch = 190;
 	}
 }
 </script>
