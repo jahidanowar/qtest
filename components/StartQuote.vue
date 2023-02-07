@@ -8,7 +8,7 @@ storeBuilder.fetchProducts();
 
 function buildProduct(productID) {
 	storeBuilder.fetchProduct(productID);
-	router.push({ path: '/toughbook' });
+	this.router.push({ path: '/toughbook' });
 }
 </script>
 
