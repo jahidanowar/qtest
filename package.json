@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@mdi/font": "^7.1.96",
 		"@pinia/nuxt": "^0.4.6",
+		"mongoose": "^6.9.0",
 		"pinia": "^2.0.29",
 		"sass": "^1.57.1",
 		"vuetify": "^3.1.2"

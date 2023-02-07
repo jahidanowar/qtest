@@ -1,8 +1,8 @@
 <script setup>
-import { useQuoteStore } from '@/store/quote';
+import { useBuilderStore } from '@/store/builder';
 
-const storeQuote = useQuoteStore();
-storeQuote.fetchToughbooks();
+const storeBuilder = useBuilderStore();
+storeBuilder.fetchToughbooks();
 </script>
 
 <template>
@@ -11,30 +11,27 @@ storeQuote.fetchToughbooks();
 			<tr>
 				<th class="text-left">Device</th>
 				<th class="text-left">SKU</th>
-				<th class="text-center">Processor</th>
+				<th class="text-center">CPU</th>
 				<th class="text-center">RAM</th>
-				<th class="text-center">4G LTE</th>
-				<th class="text-center">Touch Screen</th>
+				<th class="text-center">GPS</th>
+				<th class="text-center">Screen</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr v-for="product in storeQuote.getToughbooks" :key="product.sku">
-				<td>{{ product.device }}</td>
+			<tr v-for="product in storeBuilder.toughbooks" :key="product._id">
+				<td>{{ product.name }}</td>
 				<td>{{ product.sku }}</td>
-				<td class="text-center">{{ product.processor }}</td>
+				<td class="text-center">{{ product.cpu }}</td>
 				<td class="text-center">{{ product.ram }}</td>
 				<td class="text-center">
-					<v-icon :color="product.gps === 'No Celluar' ? 'red' : 'green'">{{
-						product.gps === 'No Celluar' ? 'mdi-close' : 'mdi-check'
+					<v-icon :color="product.gps === 'No GPS' ? 'red' : 'green'">{{
+						product.gps === 'No GPS' ? 'mdi-close' : 'mdi-check'
 					}}</v-icon>
 				</td>
 				<td class="text-center">
-					<v-icon
-						:color="product.touch === 'Standard Screen' ? 'red' : 'green'"
-						>{{
-							product.touch === 'Standard Screen' ? 'mdi-close' : 'mdi-check'
-						}}</v-icon
-					>
+					<v-icon :color="product.screen === 'Standard' ? 'red' : 'green'">{{
+						product.screen === 'Standard' ? 'mdi-close' : 'mdi-check'
+					}}</v-icon>
 				</td>
 			</tr>
 		</tbody>

@@ -1,7 +1,15 @@
 <script setup>
-import Toughbooks from '@/products.json';
+import { useBuilderStore } from '@/store/builder';
 
-const toughbooks = ref(Toughbooks);
+const storeBuilder = useBuilderStore();
+const router = useRouter();
+
+storeBuilder.fetchProducts();
+
+function buildProduct(productID) {
+	storeBuilder.fetchProduct(productID);
+	router.push({ path: '/toughbook' });
+}
 </script>
 
 <template>
@@ -10,26 +18,26 @@ const toughbooks = ref(Toughbooks);
 		<v-col
 			cols="12"
 			md="4"
-			v-for="toughbook in toughbooks"
-			:key="toughbook.device"
+			v-for="product in storeBuilder.products"
+			:key="product._id"
 		>
-			<v-card flat class="d-flex flex-column pa-10">
-				<img :src="`images/${toughbook.image}`" />
-				<h2 class="text-center mb-2">{{ toughbook.device }}</h2>
-				<div
-					class="mb-6 short-description"
-					v-html="toughbook.description"
-				></div>
+			<v-card
+				flat
+				class="d-flex flex-column bg-grey-lighten-4 rounded-xl pa-12"
+			>
+				<img :src="product.image" />
+				<h2 class="text-center mb-2">{{ product.name }}</h2>
+				<div class="mb-6 short-description" v-html="product.description"></div>
 				<div class="d-flex align-center justify-center mb-4">
 					<span class="text-body-2 text-grey mr-2">starting</span><sup>$</sup
-					><span class="text-h4">{{ toughbook.price }}</span>
+					><span class="text-h4">{{ product.basePrice }}</span>
 				</div>
 				<div class="text-center">
 					<v-btn
 						flat
 						block
 						color="blue-darken-4"
-						:to="`/products/${toughbook.pid}`"
+						@click="buildProduct(product._id)"
 						>Select</v-btn
 					>
 				</div>
@@ -38,7 +46,7 @@ const toughbooks = ref(Toughbooks);
 	</v-row>
 </template>
 
-<style>
+<style scoped>
 .short-description ul li {
 	list-style: none;
 	padding-bottom: 10px;

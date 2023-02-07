@@ -22,6 +22,14 @@ export default defineNuxtConfig({
 		},
 	},
 
+	nitro: {
+		plugins: ['~/server/index.ts'],
+	},
+
+	runtimeConfig: {
+		mongoDB: process.env.MONGO_URI,
+	},
+
 	modules: [
 		[
 			'@pinia/nuxt',

@@ -97,7 +97,7 @@ function updateCelluar(v) {
 			</section>
 			<v-divider />
 			<section class="d-flex flex-column py-4">
-				<div class="text-subtitle-1 font-weight-bold">Celluar</div>
+				<div class="text-subtitle-1 font-weight-bold">Choose connectivity</div>
 				<div class="pointer">
 					<span class="text-blue-darken-4 text-subtitle-2 mb-3"
 						>Do you want celluar data for GPS?</span

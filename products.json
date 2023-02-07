@@ -1,6 +1,6 @@
 [
 	{
-		"device": "Toughbook 55",
+		"name": "Toughbook 55",
 		"image": "toughbook_55.png",
 		"pid": "55",
 		"description": "<ul><li>Modular design with 6 user-removable expansion areas including 3 xPAK areas, RAM, SSD and keyboard</li></ul>",
@@ -8,93 +8,101 @@
 		"variations": [
 			{
 				"sku": "FZ-55D2601KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i5",
-				"gps": "No Celluar",
-				"touch": "Standard Screen",
+				"cpu": "i5",
+				"gps": "No GPS",
+				"screen": "Standard",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55DZ001KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i5",
+				"cpu": "i5",
 				"gps": "4G LTE",
-				"touch": "Standard Screen",
+				"screen": "Standard",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55F2601KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i5",
-				"gps": "No Celluar",
-				"touch": "Touchscreen",
+				"cpu": "i5",
+				"gps": "No GPS",
+				"screen": "Touchscreen",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55FZ004KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i5",
+				"cpu": "i5",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55DZ002KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i7",
-				"gps": "No Celluar",
-				"touch": "Standard Screen",
+				"cpu": "i7",
+				"gps": "No GPS",
+				"screen": "Standard",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55DZ003KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i7",
+				"cpu": "i7",
 				"gps": "4G LTE",
-				"touch": "Standard Screen",
+				"screen": "Standard",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55FZ006KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i7",
-				"gps": "No Celluar",
-				"touch": "Touchscreen",
+				"cpu": "i7",
+				"gps": "No GPS",
+				"screen": "Touchscreen",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			},
 			{
 				"sku": "FZ-55FZ007KM",
-				"device": "Toughbook 55",
+				"name": "Toughbook 55",
 				"nickname": "TB55",
-				"processor": "i7",
+				"cpu": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_55.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195888d5e933395994542"
 			}
 		],
 		"options": [
 			{
-				"type": "processor",
+				"type": "cpu",
 				"name": "i5",
 				"price": 0
 			},
 			{
-				"type": "processor",
+				"type": "cpu",
 				"name": "i7",
 				"price": 365
 			},
@@ -121,7 +129,7 @@
 		]
 	},
 	{
-		"device": "Toughbook 40",
+		"name": "Toughbook 40",
 		"image": "toughbook_40.png",
 		"pid": "40",
 		"description": "<ul><li>Modular design and user-removable expansion packs offer unparalleled customization</li></ul>",
@@ -129,48 +137,52 @@
 		"variations": [
 			{
 				"sku": "FZ-40ACAAXKM",
-				"device": "Toughbook 40",
+				"name": "Toughbook 40",
 				"nickname": "TB40",
-				"processor": "i5",
-				"gps": "No Celluar",
-				"touch": "Touchscreen",
+				"cpu": "i5",
+				"gps": "No GPS",
+				"screen": "Touchscreen",
 				"image": "toughbook_40.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195a78d5e933395994544"
 			},
 			{
 				"sku": "FZ-40ACAABKM",
-				"device": "Toughbook 40",
+				"name": "Toughbook 40",
 				"nickname": "TB40",
-				"processor": "i5",
+				"cpu": "i5",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_40.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195a78d5e933395994544"
 			},
 			{
 				"sku": "FZ-40CCAAXKM",
-				"device": "Toughbook 40",
+				"name": "Toughbook 40",
 				"nickname": "TB40",
-				"processor": "i7",
-				"gps": "No Celluar",
-				"touch": "Touchscreen",
+				"cpu": "i7",
+				"gps": "No GPS",
+				"screen": "Touchscreen",
 				"image": "toughbook_40.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195a78d5e933395994544"
 			},
 			{
 				"sku": "FZ-40CCAABKM",
-				"device": "Toughbook 40",
+				"name": "Toughbook 40",
 				"nickname": "TB40",
-				"processor": "i7",
+				"cpu": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_40.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195a78d5e933395994544"
 			}
 		]
 	},
 	{
-		"device": "Toughbook G2",
+		"name": "Toughbook G2",
 		"image": "toughbook_G2.png",
 		"pid": "G2",
 		"description": "<ul><li>Modular design with 3 expansion areas including a new quick-release SSD and backward compatible</li></ul>",
@@ -178,43 +190,47 @@
 		"variations": [
 			{
 				"sku": "FZ-G2ABFBXKM",
-				"device": "Toughbook G2",
+				"name": "Toughbook G2",
 				"nickname": "TBG2",
-				"processor": "i5",
-				"gps": "No Celluar",
-				"touch": "Touchscreen",
+				"cpu": "i5",
+				"gps": "No GPS",
+				"screen": "Touchscreen",
 				"image": "toughbook_G2.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195cb8d5e933395994546"
 			},
 			{
 				"sku": "FZ-G2AZ005KM",
-				"device": "Toughbook G2",
+				"name": "Toughbook G2",
 				"nickname": "TBG2",
-				"processor": "i5",
+				"cpu": "i5",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_G2.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195cb8d5e933395994546"
 			},
 			{
 				"sku": "FZ-G2BZ00EKM",
-				"device": "Toughbook G2",
+				"name": "Toughbook G2",
 				"nickname": "TBG2",
-				"processor": "i7",
+				"cpu": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_G2.png",
-				"ram": "16GB"
+				"ram": "16GB",
+				"product": "63e195cb8d5e933395994546"
 			},
 			{
 				"sku": "FZ-G2BZ029KM",
-				"device": "Toughbook G2",
+				"name": "Toughbook G2",
 				"nickname": "TBG2",
-				"processor": "i7",
+				"cpu": "i7",
 				"gps": "4G LTE",
-				"touch": "Touchscreen",
+				"screen": "Touchscreen",
 				"image": "toughbook_G2.png",
-				"ram": "32GB"
+				"ram": "32GB",
+				"product": "63e195cb8d5e933395994546"
 			}
 		]
 	}
