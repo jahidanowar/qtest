@@ -22,8 +22,8 @@ export const useBuilderStore = defineStore('builder', {
 		async fetchProducts() {
 			this.products = await $fetch('/api/product');
 		},
-		fetchProduct(productID) {
-			this.product = $fetch(`/api/product/${productID}`);
+		async fetchProduct(productID) {
+			this.product = await $fetch(`/api/product/${productID}`);
 			this.toughbook = this.product.models[0];
 			this.productTotal.base = this.product.basePrice;
 		},
