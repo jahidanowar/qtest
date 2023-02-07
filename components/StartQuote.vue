@@ -37,8 +37,16 @@ async function buildProduct(productID) {
 						flat
 						block
 						color="blue-darken-4"
+						class="mb-3"
 						@click="buildProduct(product._id)"
 						>Select</v-btn
+					>
+					<v-btn
+						flat
+						block
+						color="blue-darken-4"
+						@click="storeBuilder.getOneProduct(product._id)"
+						>Testing Routes</v-btn
 					>
 				</div>
 			</v-card>

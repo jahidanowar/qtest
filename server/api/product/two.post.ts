@@ -3,9 +3,8 @@ import Product from '~/server/models/Product.model';
 export default defineEventHandler(async (event) => {
 	try {
 		const body = await readBody(event);
-		const productID = event.context.params.id;
 
-		const product = await Product.findById(productID).populate([
+		const product = await Product.findById(body).populate([
 			{
 				path: 'models',
 				model: 'Toughbook',

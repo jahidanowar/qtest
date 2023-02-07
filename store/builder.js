@@ -17,18 +17,20 @@ export const useBuilderStore = defineStore('builder', {
 		cartTotal: 0,
 		salesRep: null,
 		salesReps: ['Lori Oquendo', 'Michael Cayes', 'Claes Adler'],
+		tb: {},
 	}),
 	actions: {
 		async fetchProducts() {
 			this.products = await $fetch('/api/product');
 		},
 		async fetchProduct(productID) {
-			this.product = await $fetch(`/api/product/${productID}`);
-			this.loadMore();
-		},
-		loadMore() {
+			let data = await $fetch(`/api/product/${productID}`);
+			this.product = data;
 			this.toughbook = this.product.models[0];
 			this.productTotal.base = this.product.basePrice;
+		},
+		async getOneProduct(id) {
+			this.tb = await $fetch(`/api/product/two`, { method: 'POST', body: id });
 		},
 
 		async fetchToughbooks() {
