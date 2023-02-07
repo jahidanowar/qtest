@@ -6,7 +6,7 @@ const storeBuilder = useBuilderStore();
 
 function startBuild() {
 	storeBuilder.resetProducts;
-	this.router.push({ path: '/s' });
+	router.push({ path: '/' });
 }
 </script>
 

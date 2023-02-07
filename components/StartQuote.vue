@@ -6,8 +6,8 @@ const router = useRouter();
 
 storeBuilder.fetchProducts();
 
-function buildProduct(productID) {
-	storeBuilder.fetchProduct(productID);
+async function buildProduct(productID) {
+	await storeBuilder.fetchProduct(productID);
 	this.router.push({ path: '/toughbook' });
 }
 </script>

@@ -4,9 +4,9 @@ const router = useRouter();
 
 const storeBuilder = useBuilderStore();
 
-function loadProduct() {
+async function loadProduct() {
 	storeBuilder.addToCart();
-	this.router.push({ path: '/products/extra' });
+	router.push({ path: '/products/extra' });
 }
 </script>
 
