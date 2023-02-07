@@ -15,7 +15,7 @@ function startBuild() {
 		<v-container class="d-flex align-center">
 			<RSALogo height="32" width="80" /><span
 				class="text-caption text-white ml-4"
-				>v0.1.0</span
+				>v0.1.1</span
 			>
 			<v-spacer></v-spacer>
 			<v-btn text color="white" nuxt to="/">Start Quote</v-btn>
