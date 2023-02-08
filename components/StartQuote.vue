@@ -6,9 +6,9 @@ const router = useRouter();
 
 storeBuilder.fetchProducts();
 
-async function buildProduct(productID) {
-	await storeBuilder.fetchProduct(productID);
-	router.push({ path: '/toughbook' });
+async function buildProduct() {
+	await storeBuilder.fetchProduct('1');
+	router.push({ path: '/toughbook/test' });
 }
 </script>
 
@@ -38,7 +38,7 @@ async function buildProduct(productID) {
 						block
 						color="blue-darken-4"
 						class="mb-3"
-						@click="buildProduct(product._id)"
+						@click="buildProduct()"
 						>Select</v-btn
 					>
 				</div>
