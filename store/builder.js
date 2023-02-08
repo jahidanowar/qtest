@@ -1,7 +1,7 @@
 export const useBuilderStore = defineStore('builder', {
 	state: () => ({
 		products: [],
-		product: {},
+		product: null,
 		toughbooks: [],
 		toughbook: {},
 		productTotal: {
