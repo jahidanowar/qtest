@@ -1,8 +1,8 @@
 import Product from '~/server/models/Product.model';
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler((event) => {
 	try {
-		const products = await Product.find().populate('toughbooks');
+		const products = Product.find().populate('options');
 
 		return products;
 	} catch (error) {

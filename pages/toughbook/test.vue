@@ -12,8 +12,8 @@ const storeBuilder = useBuilderStore();
 	<v-divider />
 
 	<div>
-		<div v-for="model in storeBuilder.product.toughbooks">
-			<v-btn> {{ model.sku }}</v-btn>
+		<div v-for="option in storeBuilder.product.options">
+			<v-btn> {{ option.name }}</v-btn>
 		</div>
 	</div>
 </template>
