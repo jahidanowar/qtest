@@ -99,7 +99,7 @@ const dialog = ref(false);
 							</div>
 						</div>
 
-						<v-divider class="my-8" />
+						<v-divider class="my-6" />
 					</section>
 				</div>
 			</div>

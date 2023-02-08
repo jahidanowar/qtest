@@ -9,7 +9,10 @@ export default defineEventHandler(async (event) => {
 			cpu: query.cpu,
 			gps: query.gps,
 			screen: query.screen,
-		}).populate('accessories');
+		}).populate({
+			path: 'accessories',
+			model: 'Accessory',
+		});
 
 		return toughbook;
 	} catch (error) {
