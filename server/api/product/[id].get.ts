@@ -1,3 +1,5 @@
+import Product from '~/server/models/Product.model';
+
 export default defineEventHandler(async (event) => {
 	try {
 		const { id } = event.context.params;
@@ -13,7 +15,9 @@ export default defineEventHandler(async (event) => {
 		// 	},
 		// ]);
 
-		return { message: id };
+		const product = await Product.findOne({ _id: id });
+
+		return product;
 	} catch (error) {
 		console.log(error);
 	}
