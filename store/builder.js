@@ -25,11 +25,14 @@ export const useBuilderStore = defineStore('builder', {
 			this.products = await $fetch('/api/product');
 		},
 		async fetchProduct(productID) {
-			// this.product = await $fetch(`/api/product/${productID}`);
-			const { data } = await useFetch(
-				`https://fakestoreapi.com/products/${productID}`
+			const { data } = await $fetch(
+				`https://app.ruggeddepot.net/api/product/${productID}`
 			);
-			this.tb = data;
+			this.product = data;
+			// const { data } = await useFetch(
+			// 	`https://fakestoreapi.com/products/${productID}`
+			// );
+			// this.tb = data;
 
 			// this.toughbook = this.product.models[0];
 			// this.productTotal.base = this.product.basePrice;
