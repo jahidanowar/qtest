@@ -4,18 +4,29 @@ export default defineEventHandler(async (event) => {
 	try {
 		const { id } = event.context.params;
 
-		// const product = await Product.findById(id).populate([
+		const product = await Product.findOne({ _id: id }).populate(
+			'toughbooks options'
+		);
+
+		// const product = await Product.aggregate([
+		// 	{ $match: { name: 'Toughbook 55' } },
 		// 	{
-		// 		path: 'models',
-		// 		model: 'Toughbook',
+		// 		$group: {
+		// 			_id: null,
+		// 			data: { $first: '$$ROOT' },
+		// 		},
 		// 	},
 		// 	{
-		// 		path: 'options',
-		// 		model: 'Option',
+		// 		$lookup: {
+		// 			from: 'data.toughbooks',
+		// 			localField: 'toughbooks',
+		// 			foreignField: '_id',
+		// 			as: 'models',
+		// 		},
 		// 	},
 		// ]);
 
-		const product = await Product.findOne({ _id: id }).populate('toughbooks');
+		// console.log(product);
 
 		return product;
 

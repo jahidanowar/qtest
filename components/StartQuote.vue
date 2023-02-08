@@ -32,7 +32,7 @@ async function testProduct(productID) {
 			>
 				<img :src="product.image" />
 				<h2 class="text-center mb-2">{{ product.name }}</h2>
-				<div class="mb-6 short-description" v-html="product.description"></div>
+				<div class="mb-6 short-description">{{ product.description }}</div>
 				<div class="d-flex align-center justify-center mb-4">
 					<span class="text-body-2 text-grey mr-2">starting</span><sup>$</sup
 					><span class="text-h4">{{ product.basePrice }}</span>

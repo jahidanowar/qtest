@@ -1,7 +1,7 @@
 export const useBuilderStore = defineStore('builder', {
 	state: () => ({
 		products: [],
-		product: null,
+		product: {},
 		toughbooks: [],
 		toughbook: {},
 		productTotal: {
@@ -27,14 +27,13 @@ export const useBuilderStore = defineStore('builder', {
 		},
 		async fetchProduct(productID) {
 			this.product = await $fetch(`/api/product/${productID}`);
-
 			// const { data } = await useFetch(
 			// 	`https://fakestoreapi.com/products/${productID}`
 			// );
 			// this.tb = data;
 
-			// this.toughbook = this.product.models[0];
-			// this.productTotal.base = this.product.basePrice;
+			this.toughbook = this.product.toughbooks[0];
+			this.productTotal.base = this.product.basePrice;
 		},
 
 		async fetchToughbooks() {
