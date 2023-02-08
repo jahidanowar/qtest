@@ -19,16 +19,15 @@ export const useBuilderStore = defineStore('builder', {
 		salesReps: ['Lori Oquendo', 'Michael Cayes', 'Claes Adler'],
 		tb: null,
 		pid: null,
+		message: null,
 	}),
 	actions: {
 		async fetchProducts() {
 			this.products = await $fetch('/api/product');
 		},
 		async fetchProduct(productID) {
-			const { data } = await $fetch(
-				`https://app.ruggeddepot.net/api/product/${productID}`
-			);
-			this.product = data;
+			this.message = await $fetch(`/api/product/${productID}`);
+
 			// const { data } = await useFetch(
 			// 	`https://fakestoreapi.com/products/${productID}`
 			// );

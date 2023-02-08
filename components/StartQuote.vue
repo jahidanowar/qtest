@@ -8,7 +8,7 @@ storeBuilder.fetchProducts();
 
 async function buildProduct(productID) {
 	await storeBuilder.fetchProduct(productID);
-	router.push({ path: '/toughbook' });
+	router.push({ path: '/toughbook/test' });
 }
 </script>
 

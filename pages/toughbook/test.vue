@@ -6,6 +6,6 @@ const storeBuilder = useBuilderStore();
 
 <template>
 	<div>
-		{{ storeBuilder.tb }}
+		{{ storeBuilder.message }}
 	</div>
 </template>
