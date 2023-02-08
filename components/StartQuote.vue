@@ -10,11 +10,6 @@ async function buildProduct(productID) {
 	await storeBuilder.fetchProduct(productID);
 	router.push({ path: '/toughbook' });
 }
-
-async function fetchProduct(productID) {
-	storeBuilder.product = await $fetch(`/api/product/${productID}`);
-	router.push({ path: '/toughbook' });
-}
 </script>
 
 <template>
@@ -45,13 +40,6 @@ async function fetchProduct(productID) {
 						class="mb-3"
 						@click="buildProduct(product._id)"
 						>Select</v-btn
-					>
-					<v-btn
-						flat
-						block
-						color="blue-darken-4"
-						@click="fetchProduct(product._id)"
-						>Testing Routes</v-btn
 					>
 				</div>
 			</v-card>
