@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const productSchema = new Schema(
 	{
-		models: [
+		toughbooks: [
 			{
 				type: Schema.Types.ObjectId,
 				ref: 'Toughbook',
