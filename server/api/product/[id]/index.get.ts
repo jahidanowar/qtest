@@ -17,9 +17,9 @@ export default defineEventHandler(async (event) => {
 
 		const product = await Product.findOne({ _id: id }).populate('models');
 
-		// const product = await Product.findOne({ _id: id });
-
 		return product;
+
+		// const product = await Product.findOne({ _id: id });
 	} catch (error) {
 		console.log(error);
 	}

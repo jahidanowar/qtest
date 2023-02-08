@@ -30,9 +30,7 @@ const dialog = ref(false);
 			</div>
 			<v-divider class="my-6"></v-divider>
 
-			<div>{{ storeBuilder.product.models }}</div>
-
-			<!-- <div class="d-flex flex-column">
+			<div class="d-flex flex-column">
 				<div v-for="option in storeBuilder.product.options" :key="option._id">
 					<section class="d-flex flex-column">
 						<div class="text-subtitle-1 font-weight-bold">
@@ -104,7 +102,7 @@ const dialog = ref(false);
 						<v-divider class="my-6" />
 					</section>
 				</div>
-			</div> -->
+			</div>
 		</v-col>
 	</v-row>
 	<QuoteFooter />

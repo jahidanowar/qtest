@@ -33,8 +33,8 @@ export const useBuilderStore = defineStore('builder', {
 			// );
 			// this.tb = data;
 
-			this.toughbook = this.product.models[0];
-			this.productTotal.base = this.product.basePrice;
+			// this.toughbook = this.product.models[0];
+			// this.productTotal.base = this.product.basePrice;
 		},
 
 		async fetchToughbooks() {
