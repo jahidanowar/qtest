@@ -56,6 +56,9 @@ async function testProduct(productID) {
 					>
 				</div>
 			</v-card>
+			<div v-for="tb in product.toughbooks">
+				<div>{{ tb.sku }}</div>
+			</div>
 		</v-col>
 	</v-row>
 </template>
