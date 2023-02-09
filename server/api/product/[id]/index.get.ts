@@ -2,7 +2,7 @@ import Product from "~/server/models/Product.model";
 
 export default defineEventHandler(async (event) => {
   try {
-    const { id } = event.context.params;
+    const { id } = getRouterParams(event).params;
 
     const product = await Product.findOne({ _id: id }).populate(
       "toughbooks options"
