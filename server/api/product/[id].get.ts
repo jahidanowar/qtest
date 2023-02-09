@@ -34,6 +34,7 @@ export default defineEventHandler(async (event) => {
 
     // const product = await Product.findOne({ _id: id });
   } catch (error) {
+    return error;
     console.log(error);
   }
 });
