@@ -6,9 +6,15 @@ export default defineEventHandler(async (event) => {
   try {
     const params: any = getRouterParams(event);
 
-    const product = await Product.findOne({ _id: params.id }).populate(
-      "toughbooks options"
-    );
+    const product = await Product.findOne({ _id: params.id })
+      .populate({
+        path: "options",
+        model: Option,
+      })
+      .populate({
+        path: "toughbooks",
+        model: Toughbook,
+      });
 
     // const product = await Product.aggregate([
     // 	{ $match: { name: 'Toughbook 55' } },
