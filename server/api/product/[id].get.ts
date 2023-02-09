@@ -2,7 +2,7 @@ import Product from "~/server/models/Product.model";
 
 export default defineEventHandler(async (event) => {
   try {
-    const params: any = event.context.params;
+    const params: any = getRouterParams(event).params;
 
     console.log({ params });
 
