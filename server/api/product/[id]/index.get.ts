@@ -1,10 +1,10 @@
 import Product from "~/server/models/Product.model";
+import Option from "~~/server/models/Option.model";
+import Toughbook from "~~/server/models/Toughbook.model";
 
 export default defineEventHandler(async (event) => {
   try {
-    const params: any = getRouterParams(event).params;
-
-    console.log({ "Inside: Index file": params });
+    const params: any = getRouterParams(event);
 
     const product = await Product.findOne({ _id: params.id }).populate(
       "toughbooks options"
@@ -34,6 +34,7 @@ export default defineEventHandler(async (event) => {
 
     // const product = await Product.findOne({ _id: id });
   } catch (error) {
+    return error;
     console.log(error);
   }
 });
